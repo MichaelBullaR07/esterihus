@@ -1,0 +1,1 @@
+<?php header('location: login.php'); /*Redireccionar a la vista de login*/?>

@@ -1,0 +1,238 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --black2: #040505;
+    --gray: #666;
+    --grayLigth1: #e7e6e6;
+    --grayLigth2: #8a8787;
+    --grayLigth3: #969494;
+    --grayLigth4: #ccc;
+    --grayDark1: #464647;
+    --grayDark2: rgba(63, 62, 62, 0.907);
+    --green1: #218838;
+    --green2: #28a745;
+    --redPrimary: rgb(225, 6, 6);
+    --red1: #ef5555;
+    --bluePrimary: rgb(13, 13, 242);
+    --blue1: #258cfb;
+    --blue2: #259bce;
+    --yellowPrimary: rgb(223, 199, 11);
+    --yellow1: #f8edc2;
+    --transparent: transparent;
+    --fontBig1: 1.8rem;
+    --fontBig2: 1.7rem;
+    --fontSmall1: 1.6rem;
+    --fontSmall2: 1.3rem;
+    --fontWeightNormal: normal;
+    --fontWeightBold: bold;
+    --fontFamily: 'Raleway', sans-serif;
+    --borderWidth: 0.1rem;
+    --shadowBox: 0 0 1rem rgba(0, 0, 0, 0.3);
+    --boxShadowDocument: 0 0 0 var(--borderWidth) var(--white), 0 0 0 0.25rem var(--blue1);
+    --colorModal: rgba(0, 0, 0, 0.5);
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 10px = 1rem */
+    position: relative;
+    min-height: 100%;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    color: var(--black);
+    font: var(--fontWeightNormal) var(--fontSmall2) var(--fontFamily);
+    margin: auto;
+    background-color: var(--white);
+  }
+  
+  @media (min-width: 768px) {
+    body {
+      font-size: var(--fontSmall1);
+    }
+  }
+  
+  .btn:focus,
+  .btn:active:focus,
+  .btn-link.nav-link:focus,
+  .form-control:focus,
+  .form-check-input:focus {
+    box-shadow: var(--boxShadowDocument);
+  }
+  
+  .d-none {
+    display: none !important;
+  }
+  
+  .d-grid {
+    display: grid;
+  }
+  
+  .d-grid p,
+  .d-grid h1,
+  .d-grid h2,
+  .d-grid h3,
+  .d-grid input,
+  .d-grid label,
+  .d-grid select,
+  .d-grid button {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  @media (min-width: 768px) {
+    .d-grid p,
+    .d-grid h2,
+    .d-grid input,
+    .d-grid label,
+    .d-grid select,
+    .d-grid button {
+      white-space: nowrap;
+    }
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-box {
+    width: 30rem;
+    border: var(--borderWidth) solid var(--grayLigth4);
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadowBox);
+    padding: 2rem;
+    margin: 5rem auto 0;
+  }
+  
+  .logo-img {
+    width: 75%;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+  }
+  
+  .center-text {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: rgb(107, 144, 184);
+    font-weight: bold;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgba(144, 181, 188, 0.712);
+    font-size: var(--fontSmall1);
+  }
+  
+  .login-logo,
+  .login-box-msg {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .login-box-msg {
+    font-size: var(--fontBig1);
+  }
+  
+  .form-group {
+    margin-bottom: 2rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 1rem;
+    border: var(--borderWidth) solid var(--grayLigth4);
+    border-radius: 0.5rem;
+  }
+  
+  .btn-login {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--green2);
+    color: var(--white);
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+  }
+  
+  .btn-login:hover {
+    background-color: var(--green1);
+  }
+  
+  .form-control-feedback {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+  }
+  
+  label span {
+    color: var(--red1);
+  }
+  
+  @keyframes parpadeo {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  label,
+  h1 strong,
+  legend,
+  input {
+    font-family: var(--fontFamily);
+  }
+  
+  label {
+    color: var(--grayLigth2);
+  }
+  
+  h1 strong {
+    color: var(--grayDark1);
+  }
+  
+  legend {
+    color: var(--grayDark2);
+    border-bottom: 2rem solid var(--blue2);
+    font-size: var(--fontBig1);
+  }
+  
+  input:read-only {
+    background-color: var(--yellow1);
+    border: var(--borderWidth) solid var(--grayLigth4);
+  }
+  
+  input[type="checkbox"] + label {
+    font-weight: bold;
+    line-height: 3em;
+    color: var(--grayLigth3);
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked + label {
+    color: var(--black2);
+  }
+  
+  .mensaje-ok,
+  .mensaje-error,
+  .mensaje-alerta {
+    color: var(--white);
+  }
+  
+  .mensaje-ok {
+    background-color: var(--bluePrimary);
+  }
+  
+  .mensaje-error {
+    background-color: var(--redPrimary);
+  }
+  
+  .mensaje-alerta {
+    background-color: var(--yellowPrimary);
+  }  
