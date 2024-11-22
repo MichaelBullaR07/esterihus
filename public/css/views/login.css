@@ -1,0 +1,74 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --black2: #040505;
+    --gray: #666;
+    --grayLigth1: #e7e6e6;
+    --grayLigth2: #8a8787;
+    --grayLigth3: #969494;
+    --grayLigth4: #ccc;
+    --grayDark1: #464647;
+    --grayDark2: rgba(63, 62, 62, 0.907);
+    --green1: #218838;
+    --green2: #28a745;
+    --redPrimary: rgb(225, 6, 6);
+    --red1: #ef5555;
+    --bluePrimary: rgb(13, 13, 242);
+    --blue1: #258cfb;
+    --blue2: #259bce;
+    --yellowPrimary: rgb(223, 199, 11);
+    --yellow1: #f8edc2;
+    --transparent: transparent;
+    --fontBig1: 1.8rem;
+    --fontBig2: 1.7rem;
+    --fontSmall1: 1.6rem;
+    --fontSmall2: 1.3rem;
+    --fontWeightNormal: normal;
+    --fontWeightBold: bold;
+    --fontFamily: 'Raleway', sans-serif;
+    --borderWidth: 0.1rem;
+    --boxShadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    --boxShadowDocument: 0 0 0 var(--borderWidth) var(--white), 0 0 0 0.25rem var(--blue1);
+    --colorModal: rgba(0, 0, 0, 0.5);
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 30rem;
+    border: var(--borderWidth) solid var(--grayLigth4);
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: var(--boxShadow);
+    padding: 2rem;
+    margin: 5rem auto 0;
+}
+
+.logo-img {
+    width: 75%;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+}
+
+.center-text {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: rgb(107, 144, 184);
+    font-weight: bold;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgba(144, 181, 188, 0.712);
+    font-size: var(--fontSmall1);
+}
+
+.login-logo,
+.login-box-msg {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-box-msg {
+    font-size: var(--fontBig1);
+}

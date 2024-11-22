@@ -1,61 +1,69 @@
 :root {
-  --white: rgba(255, 255, 255,1);
-  --black: rgba(0, 0, 0,1);
+  --white: #fff;
+  --black: #000;
   --black2: #040505;
-  --gray: rgba(102, 102, 102,1);
-  --grayLigth1: rgba(231, 230, 230,1);
-  --grayLigth2: rgb(138, 135, 135);
+  --gray: #666;
+  --grayLigth1: #e7e6e6;
+  --grayLigth2: #8a8787;
   --grayLigth3: #969494;
-  --grayDark1: rgba(70, 70, 71, 1);
+  --grayLigth4: #ccc;
+  --grayDark1: #464647;
   --grayDark2: rgba(63, 62, 62, 0.907);
   --green1: #218838;
   --green2: #28a745;
-  --red1: rgb(239, 85, 85);
-  --blue1: rgba(37, 140, 251,1);
-  --blue2: rgb(37, 155, 206);
+  --redPrimary: rgb(225, 6, 6);
+  --red1: #ef5555;
+  --bluePrimary: rgb(13, 13, 242);
+  --blue1: #258cfb;
+  --blue2: #259bce;
+  --yellowPrimary: rgb(223, 199, 11);
+  --yellow1: #f8edc2;
   --transparent: transparent;
   --fontBig1: 1.8rem;
-  --fonBig2: 1.7rem;
+  --fontBig2: 1.7rem;
   --fontSmall1: 1.6rem;
   --fontSmall2: 1.3rem;
   --fontWeightNormal: normal;
   --fontWeightBold: bold;
   --fontFamily: 'Raleway', sans-serif;
-  --divShadow: 0 0 0 .1rem var(--gray);
-  --boxShadowDocument: 0 0 0 .1rem var(--white), 0 0 0 .25rem var(--blue1);
+  --borderWidth: 0.1rem;
+  --shadowBox: 0 0 1rem rgba(0, 0, 0, 0.3);
+  --boxShadowDocument: 0 0 0 var(--borderWidth) var(--white), 0 0 0 0.25rem var(--blue1);
   --colorModal: rgba(0, 0, 0, 0.5);
 }
 
-/** OPTIMIZACIÓN ESTILOS DE LA PÁGINA */
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; /* 10px = 1rem */
   position: relative;
-  min-height: 100%; /* 10px = 1rem */
+  min-height: 100%;
 }
 
-*, *:before, *:after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
 body {
-  color: var(--negro);
+  color: var(--black);
   font: var(--fontWeightNormal) var(--fontSmall2) var(--fontFamily);
   margin: auto;
   background-color: var(--white);
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   body {
-      font: var(--fontWeightNormal) var(--fontSmall1) var(--fontFamily);
+    font-size: var(--fontSmall1);
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
   box-shadow: var(--boxShadowDocument);
 }
-/** FIN OPTIMIZACIÓN ESTILOS DE LA PÁGINA */
-/** INICIO DE FUNCIONALIDADES */
+
 .d-none {
   display: none !important;
 }
@@ -64,178 +72,100 @@ body {
   display: grid;
 }
 
-  .d-grid p, .d-grid h1, .d-grid h2, .d-grid h3, .d-grid input, .d-grid label, .d-grid select, .d-grid button {
-      white-space: normal;
-      overflow: hidden;
-      text-overflow: ellipsis;
+.d-grid p,
+.d-grid h1,
+.d-grid h2,
+.d-grid h3,
+.d-grid input,
+.d-grid label,
+.d-grid select,
+.d-grid button {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .d-grid p,
+  .d-grid h2,
+  .d-grid input,
+  .d-grid label,
+  .d-grid select,
+  .d-grid button {
+    white-space: nowrap;
   }
-
-@media (min-width:768px) {
-  .d-grid p, .d-grid h2, .d-grid input, .d-grid label, .d-grid select, .d-grid button {
-      white-space: nowrap;
-  }
-}
-
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-box {
-  width: 30rem;
-  border: .1rem solid #ccc;
-  background-color: var(--white);
-  border-radius: .5rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  box-sizing: border-box;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); /* Agrega una sombra al cuadro */
-  margin: 0 auto;
-  margin-top: 5rem; /* Ajusta este valor según sea necesario */
-}
-
-.logo-img {
-  width: 75%;
-  height: auto;
-  margin: 1rem; /* Ajusta este valor según sea necesario */
-  display: block;
-  margin: 0 auto;
-}
-
-/*color de la letra del loguin*/
-.center-text {
-  text-align: center;
-  margin-top: .5rem; /* Ajusta este valor según sea necesario */
-  color: rgb(107, 144, 184); /*color: rgb(39, 147, 138);*/
-  font-weight: bold; /* negrita */
-  text-shadow: .1rem .1rem .1rem rgba(144, 181, 188, 0.712); /* sombreado */
-  font-size: var(--fontSmall1); /* Tamaño de letra en píxeles */
-}
-
-.login-logo {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.login-box-msg {
-  text-align: center;
-  font-size: var(--fontBig1);
-  margin-bottom: 1rem;
-}
-
-.login-box-msg img {
-  margin-bottom: .5rem; /* Ajusta este valor para controlar la separación */
-}
-
-.login-box-msg b {
-  display: block;
-  margin-top: 1rem;
-}
-
-.form-group {
-  margin-bottom: 2rem;
-}
-
-.form-control {
-  width: 100%;
-  padding: 1rem;
-  border: .1rem solid #ccc;
-  border-radius: .5rem;
-  box-sizing: border-box;
-}
-
-.btn-login {
-  width: 100%;
-  padding: 1rem;
-  background-color: var(--green2);
-  color: var(--white);
-  border: none;
-  border-radius: 5rem;
-  cursor: pointer;
-}
-
-.btn-login:hover {
-  background-color: var(--green1);
 }
 
 .form-control-feedback {
-  position: absolute;
-  top: 80%; /* Ajusta este valor para bajar los iconos */
-  transform: translateY(-50%);
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
 }
-/* FIN DEL LOGIN */
-  /*color y parpadeo del label "campos oblitarios"*/
-  label span {
+
+label span {
     color: var(--red1);
-  }
-  @keyframes parpadeo {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  /*color y tipo de letra de los label*/
-  label {
-    color: var(--grayLigth2);
-    font-family: var(--fontFamily);
-  }
-  /*color y tipo de letra de los titulos de los formularios*/
-  h1 strong{
-    color: var(--grayDark1);
-    font-family: var(--fontFamily);
-  }
-  /*color y tipo de letra de los titulos de los fieldset*/
-  legend {
-    color: var(--grayDark2);
-    font-family: var(--fontFamily);
-    border-bottom: 2rem solid var(--blue2);
-    font-size: var(--fontBig1);
-  }
-  
-  /* tipo de letras de los input*/
-  input {
-    font-family: var(--fontFamily);
-  }
+}
 
-  /*color de los input readonly*/
-  #txtmarcatraslado, #txtserialtraslado, #txttipotraslado, #txtserorigen, #txtsuborigen, #txtdeporigen, #txtmodelotraslado {
-    background-color: #f8edc2; /* Cambia el color de fondo a tu preferencia */
-    border: .1rem solid #b0b0b1; /* Cambia el color del borde a tu preferencia */
-  } 
-
-/*tamaño y espacio de los botones de editar, inactivar y activar*/
-.btn-m {
-    font-size: var(--fontBig1); /* Ajusta el valor según el tamaño deseado */
+@keyframes parpadeo {
+  0%, 100% {
+    opacity: 1;
   }
+  50% {
+    opacity: 0;
+  }
+}
 
-/* agregar espacio entre cada casilla de verificación (checkbox) */
+label,
+h1 strong,
+legend,
+input {
+  font-family: var(--fontFamily);
+}
+
+label {
+  color: var(--grayLigth2);
+}
+
+h1 strong {
+  color: var(--grayDark1);
+}
+
+legend {
+  color: var(--grayDark2);
+  border-bottom: 2rem solid var(--blue2);
+  font-size: var(--fontBig1);
+}
+
+input:read-only {
+  background-color: var(--yellow1);
+  border: var(--borderWidth) solid var(--grayLigth4);
+}
+
 input[type="checkbox"] + label {
   font-weight: bold;
   line-height: 3em;
   color: var(--grayLigth3);
   cursor: pointer;
 }
+
 input[type="checkbox"]:checked + label {
   color: var(--black2);
 }
 
-/* color de los mensajes de guardar y actualizar */
-.mensaje-ok, .mensaje-error, .mensaje-alerta{
-  color: var(--white); /* Texto blanco */
+.mensaje-ok,
+.mensaje-error,
+.mensaje-alerta {
+  color: var(--white);
 }
 
 .mensaje-ok {
-  background-color: rgb(13, 13, 242); /* Color para el mensaje Ok */
+  background-color: var(--bluePrimary);
 }
+
 .mensaje-error {
-  background-color: rgb(225, 6, 6); /* Color para el mensaje de error */
+  background-color: var(--redPrimary);
 }
+
 .mensaje-alerta {
-  background-color: rgb(223, 199, 11); /* Color para el mensaje de advertencia */
-}
+  background-color: var(--yellowPrimary);
+} 
