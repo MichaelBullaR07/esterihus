@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="public/css/font-awesome.min.css">
     <link rel="stylesheet" href="public/css/_all-skins.min.css">
     <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="public/css/views/login.css">
     <script src="public/js/jquery.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>
     <script src="public/js/bootbox.min.js"></script>

@@ -31,6 +31,7 @@
     --boxShadowDocument: 0 0 0 var(--borderWidth) var(--white), 0 0 0 0.25rem var(--blue1);
     --colorModal: rgba(0, 0, 0, 0.5);
 }
+
 .login-container {
     display: flex;
     justify-content: center;
