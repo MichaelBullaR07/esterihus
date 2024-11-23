@@ -32,13 +32,13 @@
     --colorModal: rgba(0, 0, 0, 0.5);
 }
 
-.login-container {
+.esteriHUS__login .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login-box {
+.esteriHUS__login .login-box {
     width: 30rem;
     border: var(--borderWidth) solid var(--grayLigth4);
     background-color: var(--white);
@@ -48,14 +48,14 @@
     margin: 5rem auto 0;
 }
 
-.logo-img {
+.esteriHUS__login .logo-img {
     width: 75%;
     height: auto;
     margin: 1rem auto;
     display: block;
 }
 
-.center-text {
+.esteriHUS__login .center-text {
     text-align: center;
     margin-top: 0.5rem;
     color: rgb(107, 144, 184);
@@ -64,12 +64,12 @@
     font-size: var(--fontSmall1);
 }
 
-.login-logo,
-.login-box-msg {
+.esteriHUS__login .login-logo,
+.esteriHUS__login .login-box-msg {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.login-box-msg {
+.esteriHUS__login .login-box-msg {
     font-size: var(--fontBig1);
 }

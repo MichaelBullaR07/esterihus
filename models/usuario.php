@@ -13,8 +13,16 @@ class Usuario
 	//metodo insertar regiustro
 	public function insertar($nom1, $nom2, $ape1, $ape2, $doc, $rol, $tel, $mail, $login, $clave, $imagen, $permisos)
 	{
-		$sql = "INSERT INTO usuario (usuprinom, ususegnom, usupriape, ususegape, usunumdoc, rol, usutelefono, usuemail, login, clave, imagen) 
-				VALUES ('$nom1', '$nom2', '$ape1', '$ape2', '$doc', '$rol', '$tel', LOWER('$mail'), '$login', '$clave', '$imagen')";
+		// LLAMA PROCEDIMIENTO ALMACENADO sp_ad_usuario_crear
+		$sql = "CALL sp_ad_usuario_crear('$nom1', '$nom2', '$ape1', '$ape2', '$doc', '$rol', '$tel', LOWER('$mail'), '$login', '$clave', '$imagen')";
+		
+		
+		
+		
+		
+		
+		//$sql = "INSERT INTO usuario (usuprinom, ususegnom, usupriape, ususegape, usunumdoc, rol, usutelefono, usuemail, login, clave, imagen) 
+		//		VALUES ('$nom1', '$nom2', '$ape1', '$ape2', '$doc', '$rol', '$tel', LOWER('$mail'), '$login', '$clave', '$imagen')";
 		//return ejecutarConsulta($sql);
 		$idusuarionew = ejecutarConsulta_retornarID($sql);
 		$num_elementos = 0;

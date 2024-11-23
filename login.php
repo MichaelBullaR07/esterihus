@@ -16,7 +16,7 @@
     <script src="public/js/bootbox.min.js"></script>
     <script src="views/scripts/login.js"></script>
   </head>
-  <body class="hold-transition login-page">
+  <body class="hold-transition login-page esteriHUS__login">
     <div class="login-box login-container">
       <div class="login-logo"></div>
       <div class="login-box-body">
